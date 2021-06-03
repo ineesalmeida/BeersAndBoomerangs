@@ -1,0 +1,156 @@
+.home {
+
+    &__background {
+        position: absolute;
+        transform-origin: 0 50%;
+        transform: translateZ(0px) scale(1);
+        min-height: 170vh;
+        width: auto;
+        position: relative;
+        object-fit: cover;
+        filter: blur(5px);
+        width: 100%;
+    }
+
+    &__foreground {
+        position: absolute;
+        min-width: 20rem;
+        width: 85%;
+        top: 0rem;
+        transform-origin: 0% 50%;
+        z-index: 50;
+        transform: translateZ(2px) scale(0.7);
+        padding: 2rem;
+        display: flex;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 1rem;
+            top: -3rem;
+            width: 90%;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex-wrap: wrap;
+            top: -5rem;
+        }
+    }
+
+    &__hero {
+        min-width: 60%;
+        padding: 3rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 0rem;
+        }
+
+        &__text {
+            color: $light;
+            font-size: 4em;
+            line-height: 1.1em;
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 3em;
+            }
+        }
+    
+        &__subtext {
+            margin-top: 1rem;
+            color: $light;
+            line-height: 1.1em;
+            font-size: 2.5em;
+
+            @media only screen and (max-width: $bp-smallest) {
+                font-size: 2em;
+            }
+        }
+
+        &__img {
+            padding: 2rem;
+            transform: rotateZ(-4deg);
+
+            @media only screen and (max-width: $bp-smallest) {
+                padding: 0;
+            }
+
+            & img {
+                border: white solid 1rem;
+                margin-top: 2rem;
+                filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.4));
+                width: 100%;
+
+                @media only screen and (max-width: $bp-large) {
+                    margin-top: 0rem;
+                    border: white solid 0.5rem;
+                }
+
+                @media only screen and (max-width: $bp-medium) {
+                    margin-top: -8rem;
+                    border: white solid 0.5rem;
+                    max-width: 40rem;
+                }
+            }
+
+        }
+    }
+}
+
+#section_hero {
+    display: flex;
+    justify-content: center;
+}
+
+// @media only screen and (max-width: $bp-largest) {
+//     .home__text {
+//         font-size: 1.4em;
+//         line-height: 1.4em;
+//     }
+
+//     .hero__item {
+//         padding: 0rem 1rem;
+//         max-width: 40rem;
+//     }
+// }  
+
+// @media only screen and (max-width: $bp-medium) {
+//     .home__text {
+//         font-size: 1.4em;
+//         line-height: 1.4em;
+//     }
+
+//     .home__text .emphasis {
+//         font-size: 1.8em;
+//     }
+
+//     .home__subtext {
+//         color: white;
+//         line-height: 1.4em;
+//         font-size: 1.4em;
+//     }
+
+//     #section_hero {
+//         -webkit-box-orient: vertical;
+//         -webkit-box-direction: reverse;
+//             -ms-flex-direction: column-reverse;
+//                 flex-direction: column-reverse;
+//         -webkit-box-pack: end;
+//             -ms-flex-pack: end;
+//                 justify-content: flex-end;
+//     }
+// }  
+
+// @media only screen and (max-width: $bp-small) {
+//     .home__text {
+//         font-size: 1.4em;
+//         line-height: 1.4em;
+//     }
+
+//     .home__text .emphasis {
+//         font-size: 2em;
+//     }
+
+//     .home__subtext {
+//         color: white;
+//         line-height: 1.4em;
+//         font-size: 1.4em;
+//     }
+// }  

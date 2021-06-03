@@ -1,0 +1,27 @@
+.container {
+    position: absolute;
+    overflow: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    max-width: 80rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

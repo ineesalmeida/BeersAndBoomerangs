@@ -1,2 +1,2 @@
-# BeersAndBoomerangs
-Website for VR video game - Beers &amp; Boomerangs
+# cv
+My personal printable cv built in HTML and CSS (SASS)

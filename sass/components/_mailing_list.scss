@@ -1,0 +1,123 @@
+.mailing_list_call {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--darkGreye);
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+    max-width: 60rem;
+    margin-top: -5rem;
+    margin-left: 4rem;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 2.4em;
+        margin-top: -3rem;
+    }
+
+    &__text {
+        font-size: 1.2em;
+
+        &:last-of-type {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.form_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;  
+    margin: 2rem 0;
+
+    & .form_text{
+        display: block;
+        width: 80%;
+        height: 2.8rem;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 10rem;
+        text-indent: 10px;
+        -webkit-box-shadow: 0px 0px 0px var(--darkBlue);
+                box-shadow: 0px 0px 0px var(--darkBlue);
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+            outline: none;
+            -webkit-box-shadow: 0px 3px 0px var(--darkBlue);
+                    box-shadow: 0px 3px 0px var(--darkBlue);
+        }
+    }
+
+    & .button{
+        display: block;
+        width: 10rem;
+        height: 2.8rem;
+        border: none;
+        border-radius: 99px;
+        margin-left: 0.5rem;
+        background-color: var(--darkBlue);
+        color: white;
+        -webkit-transform: translateY(0px);
+            -ms-transform: translateY(0px);
+                transform: translateY(0px);
+        -webkit-transition: all 0.1s ease-in-out;
+        -o-transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in-out;
+
+        &:focus{
+            outline: none;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 3px 3px #aaa;
+        }
+
+        &:active {
+            transform: translateY(-1px);
+        }
+    }
+}
+
+@media only screen and (max-width: $bp-large) {
+    .mailing_list_call {
+        margin-left: 0rem;
+    }
+}  
+
+@media only screen and (max-width: $bp-small) {
+
+    .mailing_list_call {
+        padding: 1rem 2rem;
+    }
+    .mailing_list_call__title {
+        text-transform: uppercase;
+        line-height: 1.4em;
+        font-size: 1.5em;
+    }
+    
+    .mailing_list_call__text {
+        font-size: 1em;
+    }
+    
+    .mailing_list_call__text:last-of-type {
+        margin-bottom: 1.2rem;
+    }
+
+    .form_item {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .form_item .email,
+    .form_item .button{
+        width: 100%;
+        margin-top: 1rem;
+    }
+}  

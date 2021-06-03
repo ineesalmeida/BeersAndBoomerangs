@@ -1,0 +1,13 @@
+.logo {
+    width: 35rem;
+
+    &__img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: $bp-small) {
+    .logo {
+        width: 80%;
+    }
+}

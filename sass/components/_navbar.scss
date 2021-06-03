@@ -1,0 +1,44 @@
+.navbar {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: sticky;
+    top: 0rem;
+    z-index: 120;
+    
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        list-style-type: none;
+        margin: 0;
+        font-size: 1.4em;
+        padding: 1.5rem 2.5rem;
+        text-transform: uppercase;
+        background-color: transparent;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+
+        &.disable {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        &:not(.disable):hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+@media only screen and (max-width: $bp-small) {
+    .navbar__item {
+        font-size: 1em;
+        padding: 1.2rem 2rem;
+    }
+}  
+
+@media only screen and (max-width: $bp-smallest) {
+    .navbar__item {
+        font-size: 0.8em;
+        padding: 1rem 0.9rem;
+    }
+}

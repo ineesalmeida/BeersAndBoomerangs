@@ -1,0 +1,21 @@
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    font-size: 1.12rem;
+    color: $darkGrey;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Londrina Solid';
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+a.disable {
+    pointer-events: none;
+}

@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background-color: $blue;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    font-size: 1.5rem;
+    color: $darkGrey;
+}
+
+::selection {
+	color: $light;
+	background-color: darken(rgba($darkBlue, 0.6), 10%);
+}
