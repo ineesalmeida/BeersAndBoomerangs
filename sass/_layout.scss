@@ -2,7 +2,7 @@
     position: absolute;
     overflow: hidden;
     min-height: 100vh;
-    min-width: 100vw;
+    width: 100vw;
     background-color: $blue;
     display: flex;
     flex-direction: column;
@@ -35,6 +35,11 @@
     min-width: 20rem;
     flex-wrap: wrap;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1rem 2rem;
+        width: 100%;
+    }
+
     &__column {
         flex-basis: 100%;
         flex: 1;
@@ -43,5 +48,10 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+
+        @media only screen and (max-width: $bp-medium) {
+            min-width: 10rem;
+            width: 100%;
+        }
     }
 }

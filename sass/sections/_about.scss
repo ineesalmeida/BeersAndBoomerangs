@@ -9,6 +9,11 @@
     align-items: center;
     margin: 1rem;
 
+    @media only screen and (max-width: $bp-small) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     &__item {
         padding: 1rem;
         max-width: 20rem;

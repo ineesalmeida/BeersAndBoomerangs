@@ -4,7 +4,7 @@
   position: absolute;
   overflow: hidden;
   min-height: 100vh;
-  min-width: 100vw;
+  width: 100vw;
   background-color: #49BAD9;
   display: flex;
   flex-direction: column;
@@ -33,6 +33,10 @@
   position: relative;
   min-width: 20rem;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 56.25em) {
+    .section-container {
+      padding: 1rem 2rem;
+      width: 100%; } }
   .section-container__column {
     flex-basis: 100%;
     flex: 1;
@@ -41,6 +45,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 56.25em) {
+      .section-container__column {
+        min-width: 10rem;
+        width: 100%; } }
 
 *,
 *::after,
@@ -434,6 +442,10 @@ a.disable {
   justify-content: space-between;
   align-items: center;
   margin: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .team {
+      justify-content: center;
+      flex-wrap: wrap; } }
   .team__item {
     padding: 1rem;
     max-width: 20rem;
