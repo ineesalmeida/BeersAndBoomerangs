@@ -282,21 +282,24 @@ a.disable {
   .home__background {
     transform-origin: 0 50%;
     transform: translateZ(0px) scale(1);
-    min-height: 160vh;
+    min-height: 120rem;
     position: relative;
     object-fit: cover;
     filter: blur(5px);
     width: 100%; }
     @media only screen and (max-width: 68.75em) {
       .home__background {
-        min-height: 180vh;
+        min-height: 140rem;
         width: 160%; } }
     @media only screen and (max-width: 56.25em) {
       .home__background {
-        min-height: 240vh; } }
+        min-height: 160rem; } }
     @media only screen and (max-width: 37.5em) {
       .home__background {
-        min-height: 220vh; } }
+        min-height: 180rem; } }
+    @media only screen and (max-width: 20em) {
+      .home__background {
+        min-height: 140rem; } }
   .home__foreground {
     position: absolute;
     min-width: 20rem;
@@ -367,6 +370,9 @@ a.disable {
             margin-top: -8rem;
             border: white solid 0.5rem;
             max-width: 40rem; } }
+        @media only screen and (max-width: 37.5em) {
+          .home__hero__img img {
+            margin-top: -4rem; } }
   .home__mailing_list {
     position: relative;
     margin-right: auto;

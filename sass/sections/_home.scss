@@ -7,7 +7,7 @@
     &__background {
         transform-origin: 0 50%;
         transform: translateZ(0px) scale(1);
-        min-height: 160vh;
+        min-height: 120rem;
         position: relative;
         object-fit: cover;
         filter: blur(5px);
@@ -15,17 +15,22 @@
         
 
         @media only screen and (max-width: $bp-large) {
-            min-height: 180vh;
+            min-height: 140rem;
             width: 160%;
         }
 
         @media only screen and (max-width: $bp-medium) {
-            min-height: 240vh;
+            min-height: 160rem;
         }
 
         @media only screen and (max-width: $bp-small) {
-            min-height: 220vh;
+            min-height: 180rem;
         }
+
+        @media only screen and (max-width: $bp-tiny) {
+            min-height: 140rem;
+        }
+
     }
 
     &__foreground {
@@ -117,6 +122,10 @@
                     margin-top: -8rem;
                     border: white solid 0.5rem;
                     max-width: 40rem;
+                }
+
+                @media only screen and (max-width: $bp-small) {
+                    margin-top: -4rem;
                 }
             }
 
