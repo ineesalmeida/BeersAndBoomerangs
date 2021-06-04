@@ -114,24 +114,6 @@
 
     observer.observe(document.querySelector("#kangaroo_container"));
 
-    const listener = () => {
-        const MIN_KEYBOARD_HEIGHT = 300;
-            
-        const isMobile = window.innerWidth < 768;
-        const isKeyboardOpen = isMobile 
-            && window.screen.height - MIN_KEYBOARD_HEIGHT > window.visualViewport.height;
-        
-        if (isKeyboardOpen) {
-            console.log("123");
-            kangaroo.style.display = "none";
-        } else {
-            console.log("1223323");
-            kangaroo.style.display = "flex";
-        }
-    }
-
-    window.visualViewport.addEventListener('resize', listener)
-
 </script>
 
 </html>

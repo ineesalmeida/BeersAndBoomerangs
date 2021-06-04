@@ -31,7 +31,7 @@
   justify-content: space-around;
   align-items: center;
   position: relative;
-  min-width: 20rem;
+  min-width: 15rem;
   flex-wrap: wrap; }
   @media only screen and (max-width: 56.25em) {
     .section-container {
@@ -41,7 +41,7 @@
   .section-container__column {
     flex-basis: 100%;
     flex: 1;
-    min-width: 20rem;
+    min-width: 15rem;
     max-width: 70rem;
     display: flex;
     justify-content: center;
