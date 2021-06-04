@@ -1,0 +1,9 @@
+@keyframes shake
+{
+    0%   {transform: translateY(0) rotateZ(0)}
+    20%  {transform: translateY(2px) rotateZ(1deg)}
+    60%  {transform: translateY(-2px) rotateZ(-1deg)} 
+    80%  {transform: translateY(2px) rotateZ(0.5deg)}
+    90%  {transform: translateY(2px) rotateZ(-0.5deg)}
+    100% {transform: translateY(0) rotateZ(0)}
+}

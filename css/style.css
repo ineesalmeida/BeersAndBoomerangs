@@ -92,6 +92,20 @@ a {
 a.disable {
   pointer-events: none; }
 
+@keyframes shake {
+  0% {
+    transform: translateY(0) rotateZ(0); }
+  20% {
+    transform: translateY(2px) rotateZ(1deg); }
+  60% {
+    transform: translateY(-2px) rotateZ(-1deg); }
+  80% {
+    transform: translateY(2px) rotateZ(0.5deg); }
+  90% {
+    transform: translateY(2px) rotateZ(-0.5deg); }
+  100% {
+    transform: translateY(0) rotateZ(0); } }
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.2);
   position: sticky;
@@ -360,7 +374,7 @@ a.disable {
     max-width: 140rem;
     z-index: 70;
     position: absolute;
-    bottom: 0;
+    bottom: -0.5rem;
     right: 0; }
   .home__kangaroo {
     max-width: 60rem;
@@ -398,7 +412,8 @@ a.disable {
       width: 100%;
       object-fit: contain;
       transform: translateY(800px);
-      transition: transform 0.5s cubic-bezier(0.9, 0.01, 0.78, 1.19); }
+      transition: transform 0.5s cubic-bezier(0.9, 0.01, 0.78, 1.19);
+      transition-delay: 0.5s; }
       @media only screen and (max-width: 56.25em) {
         .home__kangaroo #kangaroo {
           width: 70%; } }

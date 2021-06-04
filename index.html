@@ -85,7 +85,7 @@
                 <div id="kangaroo_container" class="home__kangaroo">
                     <img id="kangaroo" class="kangaroo" src="img/kangaroo_loong.png" alt="kangaroo" />
                 </div>
-                <img class="home__front_bush" src="img/bush_front.png" alt="bush_front" />
+                <img id="front_bush" class="home__front_bush" src="img/bush_front.png" alt="bush_front" />
             </div>
         </div>
     </div>
@@ -97,14 +97,17 @@
 <script>
     let kangaroo_container = document.getElementById("kangaroo_container");
     let kangaroo = document.getElementById("kangaroo");
-    let default_offset = 400;
+    let bush = document.getElementById("front_bush");
+    let default_offset = 800;
     let offset = default_offset;
 
     var observer = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting === true) {
             offset = 0;
+            bush.style.animation = "shake 0.5s";
         } else {
             offset = default_offset;
+            bush.style.animation = "none";
         }
         kangaroo.style.transform = "translateY(" + offset.toString() + "px)";
     }, { threshold: [0.3] });

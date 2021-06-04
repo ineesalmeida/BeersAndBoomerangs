@@ -142,7 +142,7 @@
         max-width: 140rem;
         z-index: 70;
         position: absolute;
-        bottom: 0;
+        bottom: -0.5rem;
         right: 0;
     }
 
@@ -189,6 +189,7 @@
             object-fit:contain;
             transform: translateY(800px);
             transition: transform 0.5s cubic-bezier(.9,.01,.78,1.19);
+            transition-delay: 0.5s;
 
             @media only screen and (max-width: $bp-medium) {
                 width: 70%;
