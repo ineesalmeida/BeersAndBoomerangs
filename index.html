@@ -18,7 +18,7 @@
 
 <body>
     <div class="container">
-        <div class="parallax-container">
+        <div id="scroll_container" class="parallax-container">
             <div class="section header">
                 <div class="logo">
                     <a href="./">
@@ -38,24 +38,78 @@
                 <img class="home__background" src="img/background.png" alt="background">
 
                 <div class="home__foreground">
-                    .<div class="home__hero">
-                        <h1 class="home__hero__text">It's a lovely day for a BBQ with the mates, but kangaroos keep
-                            trying to steal your beer!</span></h1>
-                        <h2 class="home__hero__subtext">A VR video game under-development.</h2>
-                        <br /><br />
-                        <iframe src="https://store.steampowered.com/widget/1588610/" frameborder="0" width="100%"
-                            height="240"></iframe>
+                    <div class="home__hero">
+                        <div class="home__hero__text">
+                            <h1 class="home__hero__title">It's a lovely day for a BBQ with the mates, but kangaroos keep
+                                trying to steal your beer!</span></h1>
+                            <h2 class="home__hero__subtitle">A VR video game under-development.</h2>
+                            <br />
+                            <br />
+                            <iframe src="https://store.steampowered.com/widget/1588610/" frameborder="0" width="100%"
+                                height="240"></iframe>
+                        </div>
+                        <div class="home__hero__img">
+                            <img class="hero__img" src="img/hero.jpg" alt="screenshot" />
+                        </div>
                     </div>
-                    <div class="home__hero__img">
-                        <img class="hero__img" src="img/hero.jpg" alt="screenshot" />
+                    <div class="home__mailing_list">
+                        <div class="mailing_list_call">
+                            <h2 class="mailing_list_call__text">Want first-hand updates?</h2><br /><br />
+                            <h2 class="mailing_list_call__title">Join our mailing list!</h2>
+                            <div id="mc_embed_signup">
+                                <form
+                                    action="https://gmail.us1.list-manage.com/subscribe/post?u=b6e6eca0d45fc6d605d2acc56&amp;id=e382d10be5"
+                                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                    class="validate" target="_blank" noValidate>
+                                    <div id="mc_embed_signup_scroll" class="form_item">
+                                        <input type="email" name="EMAIL" class="email form_text" id="mce-EMAIL"
+                                            placeholder="email address" required />
+                                        <div aria-hidden="true" hidden="true">
+                                            <input type="text" name="b_b6e6eca0d45fc6d605d2acc56_e382d10be5"
+                                                tabIndex="-1" />
+                                        </div>
+                                        <div class="clear">
+                                            <input type="submit" value="Subscribe" name="subscribe"
+                                                id="mc-embedded-subscribe" class="button" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <p class="mailing_list_call__text">We will only send emails when there are major news about
+                                the
+                                development and release of the game. Unsubscribe anytime</p>
+                        </div>
                     </div>
                 </div>
+
+                <div id="kangaroo_container" class="home__kangaroo">
+                    <img id="kangaroo" class="kangaroo" src="img/kangaroo_loong.png" alt="kangaroo" />
+                </div>
+                <img class="home__front_bush" src="img/bush_front.png" alt="bush_front" />
             </div>
         </div>
     </div>
 </body>
 
 <script id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/b6e6eca0d45fc6d605d2acc56/6d62fd77cdb4ac434928d4538.js");
+</script>
+
+<script>
+    let kangaroo_container = document.getElementById("kangaroo_container");
+    let kangaroo = document.getElementById("kangaroo");
+    let default_offset = 400;
+    let offset = default_offset;
+
+    var observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting === true) {
+            offset = 0;
+        } else {
+            offset = default_offset;
+        }
+        kangaroo.style.transform = "translateY(" + offset.toString() + "px)";
+    }, { threshold: [0.3] });
+
+    observer.observe(document.querySelector("#kangaroo_container"));
 </script>
 
 </html>

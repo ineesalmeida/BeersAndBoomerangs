@@ -1,14 +1,23 @@
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+    font-size: 1.4rem;
     line-height: 1.7;
-    font-size: 1.12rem;
     color: $darkGrey;
+}
+
+p {
+    font-size: 1.3em;
+    color: $light;
+    margin-bottom: 1em;
+    line-height: 1.4em;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Londrina Solid';
     text-transform: uppercase;
+    color: $light;
+    margin-top: 1em;
 }
 
 a {
