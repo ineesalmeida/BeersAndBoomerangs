@@ -36,6 +36,7 @@
   @media only screen and (max-width: 56.25em) {
     .section-container {
       padding: 1rem 2rem;
+      min-width: 10rem;
       width: 100%; } }
   .section-container__column {
     flex-basis: 100%;
