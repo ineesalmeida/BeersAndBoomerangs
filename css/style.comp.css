@@ -31,7 +31,7 @@
   justify-content: space-around;
   align-items: center;
   position: relative;
-  min-width: 15rem;
+  min-width: 10rem;
   flex-wrap: wrap; }
   @media only screen and (max-width: 56.25em) {
     .section-container {
@@ -41,7 +41,7 @@
   .section-container__column {
     flex-basis: 100%;
     flex: 1;
-    min-width: 15rem;
+    min-width: 10rem;
     max-width: 70rem;
     display: flex;
     justify-content: center;
@@ -161,46 +161,12 @@ a.disable {
 
 .parallax-container {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-perspective: 8px;
   perspective: 8px;
-  -webkit-perspective-origin: 0%;
   perspective-origin: 0%; }
-
-/* back bush */
-.foreground__image.bush_back {
-  bottom: 0rem;
-  height: 35rem;
-  width: auto;
-  transform: translateZ(2.2px) scale(0.7); }
-
-/* mailing list call */
-.foreground__image#section_mailing_list {
-  bottom: 12vh;
-  width: 100%;
-  z-index: 200;
-  transform: translateZ(5px) scale(0.375);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: end;
-  padding: 0 1rem; }
-
-#section_mailing_list .kangaroo {
-  margin-top: 2rem;
-  max-width: 70%; }
-
-/* front bush */
-.foreground__image.bush_front {
-  z-index: 201;
-  height: 35rem;
-  width: auto; }
 
 .mailing_list_call {
   background-color: rgba(255, 255, 255, 0.8);
@@ -278,7 +244,8 @@ a.disable {
   display: flex;
   justify-content: flex-start;
   max-height: 160rem;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  overflow-x: hidden; }
   .home__background {
     transform-origin: 0 50%;
     transform: translateZ(0px) scale(1);
