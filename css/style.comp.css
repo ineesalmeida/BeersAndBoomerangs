@@ -115,6 +115,14 @@ a.disable {
   100% {
     transform: translateY(0) rotateZ(0); } }
 
+@keyframes fade_loop {
+  0% {
+    color: darkslategray; }
+  40% {
+    color: rgba(47, 79, 79, 0.6); }
+  100% {
+    color: darkslategray; } }
+
 .navbar {
   background-color: rgba(255, 255, 255, 0.2);
   position: sticky;
@@ -124,9 +132,10 @@ a.disable {
     display: flex; }
   .navbar__item {
     list-style-type: none;
+    position: relative;
     margin: 0;
     font-size: 1.4em;
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 3rem;
     text-transform: uppercase;
     background-color: transparent;
     -webkit-transition: all 0.3s ease-in-out;
@@ -136,16 +145,49 @@ a.disable {
       color: rgba(255, 255, 255, 0.4); }
     .navbar__item:not(.disable):hover {
       background-color: rgba(255, 255, 255, 0.3); }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__item {
+        font-size: 1em;
+        padding: 1.2rem 2rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .navbar__item {
+        font-size: 0.8em;
+        padding: 1rem 0.9rem; } }
+  .navbar__icon {
+    padding: 0.5rem 2rem; }
+    .navbar__icon i {
+      font-size: 2em;
+      margin-top: 0.8rem; }
+    .navbar__icon:not(.disable):hover {
+      background-color: transparent;
+      animation: fade_loop 1s;
+      animation-iteration-count: infinite; }
+    @media only screen and (max-width: 37.5em) {
+      .navbar__icon {
+        font-size: 1.1em;
+        padding: 0.3rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .navbar__icon {
+        font-size: 0.9em;
+        padding: 0.2rem; } }
 
-@media only screen and (max-width: 37.5em) {
-  .navbar__item {
-    font-size: 1em;
-    padding: 1.2rem 2rem; } }
+.navbar__item:not(.navbar__icon)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/boomerang.png");
+  background-size: cover;
+  width: 1.5em;
+  height: 1.5em;
+  left: 0.8rem;
+  bottom: 15rem;
+  opacity: 0;
+  transform: rotate(500deg);
+  transition: all 0.5s cubic-bezier(0.54, -0.29, 0.36, 1.38); }
 
-@media only screen and (max-width: 31.25em) {
-  .navbar__item {
-    font-size: 0.8em;
-    padding: 1rem 0.9rem; } }
+.navbar__item:not(.navbar__icon):hover::before {
+  bottom: 1.7rem;
+  transform: rotate(-130deg);
+  opacity: 1; }
 
 .logo {
   width: 35rem; }
@@ -300,7 +342,7 @@ a.disable {
       .home__hero {
         padding: 0rem; } }
     .home__hero__text {
-      min-width: 60%; }
+      min-width: 55%; }
     .home__hero__title {
       color: #fff;
       font-size: 4em;
@@ -318,6 +360,7 @@ a.disable {
           font-size: 2em; } }
     .home__hero__img {
       padding: 2rem;
+      min-width: 40%;
       transform: rotateZ(-4deg); }
       @media only screen and (max-width: 31.25em) {
         .home__hero__img {
@@ -451,12 +494,13 @@ a.disable {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 0rem; }
+  margin-right: 0rem;
+  color: #fff; }
   .social__icon a {
     font-size: 2.6em;
     text-decoration: none;
     transition: all 0.2s ease-in-out; }
     .social__icon a:hover {
       font-size: 2.8em;
-      color: rgba(0, 0, 0, 0.4);
+      color: rgba(255, 255, 255, 0.8);
       transform: translate(0, -0.3rem); }

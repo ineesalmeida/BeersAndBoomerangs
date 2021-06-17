@@ -10,9 +10,10 @@
 
     &__item {
         list-style-type: none;
+        position: relative;
         margin: 0;
         font-size: 1.4em;
-        padding: 1.5rem 2.5rem;
+        padding: 1.5rem 3rem;
         text-transform: uppercase;
         background-color: transparent;
         -webkit-transition: all 0.3s ease-in-out;
@@ -26,19 +27,63 @@
         &:not(.disable):hover {
             background-color: rgba(255, 255, 255, 0.3);
         }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1em;
+            padding: 1.2rem 2rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 0.8em;
+            padding: 1rem 0.9rem;
+        }
+    }
+
+    &__icon {
+        padding: 0.5rem 2rem;
+
+        & i {
+            font-size: 2em;
+            margin-top: 0.8rem;
+        }
+
+        &:not(.disable):hover {
+            background-color: transparent;
+            animation: fade_loop 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 1.1em;
+            padding: 0.3rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            font-size: 0.9em;
+            padding: 0.2rem;
+        }
     }
 }
 
-@media only screen and (max-width: $bp-small) {
-    .navbar__item {
-        font-size: 1em;
-        padding: 1.2rem 2rem;
-    }
-}  
+// @media only screen and (min-width: $bp-smallest) {
 
-@media only screen and (max-width: $bp-smallest) {
-    .navbar__item {
-        font-size: 0.8em;
-        padding: 1rem 0.9rem;
+    .navbar__item:not(.navbar__icon){
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../../img/boomerang.png");
+            background-size: cover;           
+            width: 1.5em;
+            height: 1.5em;
+            left: 0.8rem;
+            bottom: 15rem;
+            opacity: 0;
+            transform: rotate(500deg);
+            transition: all 0.5s cubic-bezier(.54,-0.29,.36,1.38);
+        }
+
+        &:hover::before {
+            bottom: 1.7rem;
+            transform: rotate(-130deg);
+            opacity: 1;
+        }
     }
-}
+// }

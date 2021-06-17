@@ -7,3 +7,10 @@
     90%  {transform: translateY(2px) rotateZ(-0.5deg)}
     100% {transform: translateY(0) rotateZ(0)}
 }
+
+@keyframes fade_loop
+{
+    0%   {color: rgba($darkGrey, 1)}
+    40% {color: rgba($darkGrey, 0.6)}
+    100% {color: rgba($darkGrey, 1)}
+}
