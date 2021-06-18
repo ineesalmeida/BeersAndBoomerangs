@@ -153,41 +153,43 @@ a.disable {
       .navbar__item {
         font-size: 0.8em;
         padding: 1rem 0.9rem; } }
+    @media only screen and (min-width: 31.25em) {
+      .navbar__item::before {
+        content: "";
+        position: absolute;
+        background-image: url("../../img/boomerang.png");
+        background-size: cover;
+        width: 1.5em;
+        height: 1.5em;
+        left: 0.8rem;
+        bottom: 15rem;
+        opacity: 0;
+        transform: rotate(500deg);
+        transition: all 0.5s cubic-bezier(0.54, -0.29, 0.36, 1.38); }
+        .navbar__item::before.navbar__icon {
+          width: 1.4em;
+          height: 1.4em; }
+      .navbar__item:hover::before {
+        bottom: 1.7rem;
+        transform: rotate(-130deg);
+        opacity: 1; } }
+  @media only screen and (min-width: 31.25em) and (max-width: 37.5em) {
+    .navbar__item:hover::before {
+      bottom: 1.4rem;
+      left: 0.4rem; } }
   .navbar__icon {
-    padding: 0.5rem 2rem; }
+    padding: 0.5rem 3rem; }
     .navbar__icon i {
       font-size: 2em;
       margin-top: 0.8rem; }
-    .navbar__icon:not(.disable):hover {
-      background-color: transparent;
-      animation: fade_loop 1s;
-      animation-iteration-count: infinite; }
     @media only screen and (max-width: 37.5em) {
       .navbar__icon {
         font-size: 1.1em;
-        padding: 0.3rem; } }
+        padding: 0.3rem 2rem; } }
     @media only screen and (max-width: 31.25em) {
       .navbar__icon {
         font-size: 0.9em;
-        padding: 0.2rem; } }
-
-.navbar__item:not(.navbar__icon)::before {
-  content: "";
-  position: absolute;
-  background-image: url("../../img/boomerang.png");
-  background-size: cover;
-  width: 1.5em;
-  height: 1.5em;
-  left: 0.8rem;
-  bottom: 15rem;
-  opacity: 0;
-  transform: rotate(500deg);
-  transition: all 0.5s cubic-bezier(0.54, -0.29, 0.36, 1.38); }
-
-.navbar__item:not(.navbar__icon):hover::before {
-  bottom: 1.7rem;
-  transform: rotate(-130deg);
-  opacity: 1; }
+        padding: 0.2rem 0.9rem; } }
 
 .logo {
   width: 35rem; }
