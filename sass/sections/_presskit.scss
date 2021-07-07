@@ -1,0 +1,47 @@
+.presskit {
+    & h1 {
+        margin-top: 1em;
+        font-size: 3em;
+    }
+
+    &__factsheet {
+        color: white;
+        font-size: 1.2em;
+        list-style: none;
+        width: 100%;
+    
+        & a {
+            text-decoration: underline;
+        }
+    }
+
+    &__download_wrapper {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__download {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0.5rem;
+        font-size: 1.5em;
+        transition: all 0.2s ease-in-out;
+        background-color: rgba(white, 0.2);
+        border-radius: 1rem;
+        padding: 2rem 4rem;
+        text-transform: uppercase;
+
+        & i {
+            font-size: 1.6em;
+            margin-left: 1rem;
+        }
+
+        &:hover{
+            background-color: rgba(white, 0.3)
+        }
+
+    }
+}
