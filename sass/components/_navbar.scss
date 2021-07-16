@@ -6,6 +6,19 @@
     
     &__list {
         display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list_wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            flex-wrap: wrap;
+        }
     }
 
     &__item {
