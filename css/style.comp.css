@@ -210,9 +210,42 @@ a.disable {
   .logo__img {
     width: 100%; }
 
+.free-key {
+  width: 16rem;
+  position: fixed;
+  top: 3rem;
+  right: 5rem;
+  transform: rotate(15deg);
+  z-index: 999;
+  transition: all 0.1s ease-in-out; }
+  .free-key__img {
+    width: 100%; }
+  .free-key:hover {
+    width: 17rem; }
+
+@media only screen and (max-width: 68.75em) {
+  .free-key {
+    width: 14rem; }
+    .free-key:hover {
+      width: 14.5rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .free-key {
+    width: 12rem;
+    top: 2rem;
+    right: 3rem; }
+    .free-key:hover {
+      width: 12.5rem; } }
+
 @media only screen and (max-width: 37.5em) {
   .logo {
-    width: 80%; } }
+    width: 80%; }
+  .free-key {
+    width: 8rem;
+    top: 1rem;
+    right: 1rem; }
+    .free-key:hover {
+      width: 8.5rem; } }
 
 .wrapper {
   position: relative; }
