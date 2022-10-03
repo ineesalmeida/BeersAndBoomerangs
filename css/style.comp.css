@@ -495,6 +495,12 @@ a.disable {
       @media only screen and (max-width: 20em) {
         .home__kangaroo #kangaroo {
           width: 85%; } }
+    .home__kangaroo #leaves {
+      width: 150%;
+      position: absolute;
+      object-fit: contain;
+      transition: transform 0.3s cubic-bezier(0.9, 0.01, 0.78, 1.19);
+      transition-delay: 0.8s; }
 
 #section_hero {
   display: flex;

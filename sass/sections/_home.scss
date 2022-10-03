@@ -4,7 +4,6 @@
     overflow-y: hidden;
     overflow-x: hidden;
     align-items: center;
-
     &__background {
         position: absolute;
         bottom: 0;
@@ -15,26 +14,20 @@
         object-fit: cover;
         width: 100%;
         z-index: -200;
-
         @media only screen and (max-width: $bp-large) {
             min-height: 140rem;
             width: 160%;
         }
-
         @media only screen and (max-width: $bp-medium) {
             min-height: 160rem;
         }
-
         @media only screen and (max-width: $bp-small) {
             min-height: 180rem;
         }
-
         @media only screen and (max-width: $bp-tiny) {
             min-height: 140rem;
         }
-
     }
-
     &__foreground {
         position: relative;
         min-width: 20rem;
@@ -44,13 +37,11 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 20rem;
-
         @media only screen and (max-width: $bp-large) {
             padding: 1rem;
             width: 95%;
         }
     }
-
     &__trailer {
         padding: 2rem;
         width: 100%;
@@ -58,96 +49,78 @@
         justify-content: center;
         align-items: center;
     }
-
     &__hero {
         width: 100%;
         padding: 3rem;
         display: flex;
-
         @media only screen and (max-width: $bp-large) {
             flex-wrap: wrap;
             top: -10rem;
         }
-
         @media only screen and (max-width: $bp-smallest) {
             padding: 0rem;
         }
-
         &__text {
             min-width: 55%;
             padding: 2rem 4rem;
         }
-
         &__title {
             color: $light;
             font-size: 4em;
             line-height: 1.1em;
-
             @media only screen and (max-width: $bp-smallest) {
                 font-size: 3em;
             }
         }
-    
         &__subtitle {
             margin-top: 1rem;
             color: $light;
             line-height: 1.1em;
             font-size: 2.5em;
-
             @media only screen and (max-width: $bp-smallest) {
                 font-size: 2em;
             }
         }
-
         &__img {
             padding: 2rem 4rem;
             min-width: 40%;
             transform: rotateZ(-4deg);
-
             @media only screen and (max-width: $bp-smallest) {
                 padding: 0;
             }
-
             & img {
                 border: white solid 1rem;
                 margin-top: 2rem;
                 filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.4));
                 width: 100%;
-
                 @media only screen and (max-width: $bp-large) {
                     margin-top: -4rem;
                     border: white solid 0.7rem;
                     max-width: 50rem;
                 }
-
                 @media only screen and (max-width: $bp-medium) {
                     margin-top: -8rem;
                     border: white solid 0.5rem;
                     max-width: 40rem;
                 }
-
                 @media only screen and (max-width: $bp-small) {
                     margin-top: -4rem;
                 }
             }
-
         }
     }
-
     &__mailing_list {
         position: relative;
         margin-right: auto;
         width: 50%;
         margin-top: 10rem;
         z-index: 200;
-
         @media only screen and (max-width: $bp-medium) {
             margin-top: 4rem;
             margin-bottom: 30rem;
             width: 100%;
         }
     }
-
     &__front_bush {
         position: absolute;
         bottom: -0.5rem;
@@ -157,7 +130,6 @@
         max-width: 140rem;
         z-index: 70;
     }
-
     &__kangaroo {
         position: absolute;
         bottom: 0;
@@ -169,46 +141,45 @@
         right: 15rem;
         display: flex;
         justify-content: center;
-
         @media only screen and (max-width: $bp-huge) {
             right: 20rem;
             max-width: 100rem;
         }
-
         @media only screen and (max-width: $bp-largest) {
             right: 10rem;
             max-width: 100rem;
         }
-
         @media only screen and (max-width: $bp-large) {
             right: 6rem;
             max-width: 40rem;
         }
-
         @media only screen and (max-width: $bp-medium) {
             max-width: 60rem;
             right: 0;
             width: 100%;
             bottom: -6rem;
         }
-
         @media only screen and (max-width: $bp-smallest) {
             bottom: 0rem;
         }
-
         & #kangaroo {
             width: 100%;
-            object-fit:contain;
-            transition: transform 0.5s cubic-bezier(.9,.01,.78,1.19);
+            object-fit: contain;
+            transition: transform 0.5s cubic-bezier(.9, .01, .78, 1.19);
             transition-delay: 0.5s;
-
             @media only screen and (max-width: $bp-medium) {
                 width: 70%;
             }
-
             @media only screen and (max-width: $bp-tiny) {
                 width: 85%;
             }
+        }
+        & #leaves {
+            width: 150%;
+            position: absolute;
+            object-fit: contain;
+            transition: transform 0.3s cubic-bezier(.9, .01, .78, 1.19);
+            transition-delay: 0.8s;
         }
     }
 }
@@ -218,26 +189,21 @@
     justify-content: center;
 }
 
-
 #trailer {
     width: 1008px;
     height: 567px;
-
     @media only screen and (max-width: $bp-huge) {
         width: 672px;
         height: 378px;
     }
-
     @media only screen and (max-width: $bp-large) {
         width: 560px;
         height: 315px;
     }
-
     @media only screen and (max-width: $bp-small) {
         width: 448px;
         height: 252px;
     }
-
     @media only screen and (max-width: $bp-tiny) {
         width: 300px;
         height: 168px;
