@@ -8,36 +8,30 @@
     justify-content: space-between;
     align-items: center;
     margin: 1rem;
-
     @media only screen and (max-width: $bp-small) {
         justify-content: center;
         flex-wrap: wrap;
     }
-
     &__item {
         padding: 1rem;
         max-width: 20rem;
         margin: 1rem 3rem;
         text-align: center;
-
+        height: 100%;
         & p {
             line-height: 1.2em;
         }
-
         & small {
             font-size: 0.7em;
         }
     }
-
     &__img {
         margin-bottom: 1rem;
-
-        & img{
+        & img {
             width: 90%;
             border-radius: 99px;
         }
     }
-
     &__social {
         display: flex;
         flex-direction: row;
@@ -45,14 +39,12 @@
     }
 }
 
-
 .social {
     &__container {
         display: flex;
         justify-content: flex-end;
         margin-bottom: 1rem;
     }
-
     &__icon {
         margin-right: 1rem;
         width: 0.8rem;
@@ -62,12 +54,10 @@
         align-items: center;
         margin-right: 0rem;
         color: $light;
-
         & a {
             font-size: 2.6em;
             text-decoration: none;
             transition: all 0.2s ease-in-out;
-
             &:hover {
                 font-size: 2.8em;
                 color: rgba($light, 0.8);

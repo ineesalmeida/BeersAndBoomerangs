@@ -543,7 +543,8 @@ a.disable {
     padding: 1rem;
     max-width: 20rem;
     margin: 1rem 3rem;
-    text-align: center; }
+    text-align: center;
+    height: 100%; }
     .team__item p {
       line-height: 1.2em; }
     .team__item small {
